@@ -20,17 +20,6 @@ end
     end
 end
 
-class ChangeStudent < AciveRecord[6.0]
-  def change
-    reversible do |dir|
-    change_table :students do |t|
-    dir.up { t.change : age, :string}
-    dir.down{t.change :age, :integer}
-
-  end
-end
-end
-
 
 class ChangeStudentTableData < ActiveRecord::Migration[6.0]
   def  up
